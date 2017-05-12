@@ -10,7 +10,7 @@
     // like Node.
     module.exports = factory(require("jquery"),require("simple-module"),require("simple-hotkeys"),require("simple-uploader"));
   } else {
-    root['Simditor'] = factory(jQuery,SimpleModule,simple.hotkeys,simple.uploader);
+    root['Simditor'] = factory(root["jQuery"],root["SimpleModule"],root["simple.hotkeys"],root["simple.uploader"]);
   }
 }(this, function ($, SimpleModule, simpleHotkeys, simpleUploader) {
 
@@ -2472,6 +2472,10 @@ Simditor = (function(superClass) {
       this.hotkeys = simpleHotkeys({
         el: this.body
       });
+    } else if (simple && simple.hotkeys) {
+      this.hotkeys = simple.hotkeys({
+        el: this.body
+      });
     } else {
       throw new Error('simditor: simple-hotkeys is required.');
       return;
@@ -2679,8 +2683,8 @@ Simditor.i18n = {
     'linkText': '链接文字',
     'linkUrl': '链接地址',
     'linkTarget': '打开方式',
-    'openLinkInCurrentWindow': '在新窗口中打开',
-    'openLinkInNewWindow': '在当前窗口中打开',
+    'openLinkInCurrentWindow': '在当前窗口中打开',
+    'openLinkInNewWindow': '在新窗口中打开',
     'removeLink': '移除链接',
     'ol': '有序列表',
     'ul': '无序列表',

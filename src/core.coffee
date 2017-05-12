@@ -38,6 +38,9 @@ class Simditor extends SimpleModule
     if simpleHotkeys
       @hotkeys = simpleHotkeys
         el: @body
+    else if simple and simple.hotkeys
+      @hotkeys = simple.hotkeys
+        el: @body
     else
       throw new Error 'simditor: simple-hotkeys is required.'
       return
