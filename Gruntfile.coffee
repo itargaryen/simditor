@@ -98,7 +98,7 @@ module.exports = (grunt) ->
     copy:
       vendor:
         files: [{
-          src: 'vendor/bower/jquery/dist/jquery.min.js',
+          src: 'node_modules/jquery/dist/jquery.min.js',
           dest: 'site/assets/scripts/jquery.min.js'
         }]
       styles:
@@ -108,13 +108,13 @@ module.exports = (grunt) ->
         }]
       scripts:
         files: [{
-          src: 'vendor/bower/simple-module/lib/module.js',
+          src: 'node_modules/simple-module/lib/module.js',
           dest: 'site/assets/scripts/module.js'
         }, {
-          src: 'vendor/bower/simple-uploader/lib/uploader.js',
+          src: 'node_modules/simple-uploader/lib/uploader.js',
           dest: 'site/assets/scripts/uploader.js'
         }, {
-          src: 'vendor/bower/simple-hotkeys/lib/hotkeys.js',
+          src: 'node_modules/simple-hotkeys/lib/hotkeys.js',
           dest: 'site/assets/scripts/hotkeys.js'
         }, {
           src: 'lib/simditor.js',
@@ -128,16 +128,16 @@ module.exports = (grunt) ->
           src: 'lib/*',
           dest: 'package/scripts/'
         }, {
-          src: 'vendor/bower/jquery/dist/jquery.min.js',
+          src: 'node_modules/jquery/dist/jquery.min.js',
           dest: 'package/scripts/jquery.min.js'
         }, {
-          src: 'vendor/bower/simple-module/lib/module.js',
+          src: 'node_modules/simple-module/lib/module.js',
           dest: 'package/scripts/module.js'
         }, {
-          src: 'vendor/bower/simple-uploader/lib/uploader.js',
+          src: 'node_modules/simple-uploader/lib/uploader.js',
           dest: 'package/scripts/uploader.js'
         }, {
-          src: 'vendor/bower/simple-hotkeys/lib/hotkeys.js',
+          src: 'node_modules/simple-hotkeys/lib/hotkeys.js',
           dest: 'package/scripts/hotkeys.js'
         }, {
           expand: true,
@@ -233,10 +233,10 @@ module.exports = (grunt) ->
             'spec/buttons/*.js'
           ]
           vendor: [
-            'vendor/bower/jquery/dist/jquery.min.js'
-            'vendor/bower/simple-module/lib/module.js'
-            'vendor/bower/simple-uploader/lib/uploader.js'
-            'vendor/bower/simple-hotkeys/lib/hotkeys.js'
+            'node_modules/jquery/dist/jquery.min.js'
+            'node_modules/simple-module/lib/module.js'
+            'node_modules/simple-uploader/lib/uploader.js'
+            'node_modules/simple-hotkeys/lib/hotkeys.js'
           ]
 
     curl:
