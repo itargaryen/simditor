@@ -106,7 +106,7 @@ Selection = (function(superClass) {
         };
       })(this)());
     }
-    return this._startNodes;
+    return this._startNodes || [];
   };
 
   Selection.prototype.endNodes = function() {
@@ -604,7 +604,7 @@ Formatter = (function(superClass) {
       return;
     }
     if ($node[0].nodeType === 3) {
-      text = $node.text().replace(/(\r\n|\n|\r)/gm, '');
+      text = $node.text().trim().replace(/(\r\n|\n|\r)/gm, '');
       if (text) {
         textNode = document.createTextNode(text);
         $node.replaceWith(textNode);
@@ -683,7 +683,7 @@ Formatter = (function(superClass) {
   };
 
   Formatter.prototype._cleanNodeStyles = function($node) {
-    var allowedStyles, k, len, pair, ref, ref1, style, styleStr, styles;
+    var allowedStyles, idx, k, len, pair, ref, ref1, style, styleStr, styles;
     styleStr = $node.attr('style');
     if (!styleStr) {
       return;
@@ -698,7 +698,8 @@ Formatter = (function(superClass) {
     for (k = 0, len = ref.length; k < len; k++) {
       style = ref[k];
       style = $.trim(style);
-      pair = style.split(':');
+      idx = style.indexOf(':');
+      pair = [style.slice(0, idx), style.slice(idx + 1)];
       if (!(pair.length = 2)) {
         continue;
       }
@@ -2813,8 +2814,11 @@ Button = (function(superClass) {
         var exceed, noFocus, param;
         e.preventDefault();
         noFocus = _this.needFocus && !_this.editor.inputManager.focused;
-        if (_this.el.hasClass('disabled') || noFocus) {
+        if (_this.el.hasClass('disabled')) {
           return false;
+        }
+        if (noFocus) {
+          _this.editor.body.focus();
         }
         if (_this.menu) {
           _this.wrapper.toggleClass('menu-on').siblings('li').removeClass('menu-on');
