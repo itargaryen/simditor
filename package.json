@@ -1,16 +1,16 @@
 {
   "name": "tar-simditor",
-  "version": "2.3.12",
-  "description": "A simple online editor",
-  "keywords": ["editor", "simditor"],
+  "version": "2.3.13",
+  "description": "One copy with bugs have been fixed of simditor",
+  "keywords": ["editor", "tar-simditor"],
   "repository": {
     "type": "git",
-    "url": "git@github.com:mycolorway/simditor.git"
+    "url": "git@github.com:itargaryen/tar-simditor.git"
   },
-  "author": "farthinker <farthinker@gmail.com>",
+  "author": "itargaryen <gcy77@live.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mycolorway/simditor/issues"
+    "url": "https://github.com/itargaryen/tar-simditor/issues"
   },
   "scripts": {
     "test": "grunt test --verbose"
