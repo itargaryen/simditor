@@ -1,7 +1,7 @@
 {
   "name": "tar-simditor",
   "version": "2.3.13",
-  "description": "One copy with bugs have been fixed of simditor",
+  "description": "One fork with bugs fixed of simditor",
   "keywords": ["editor", "tar-simditor"],
   "repository": {
     "type": "git",
