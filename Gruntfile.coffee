@@ -89,11 +89,11 @@ module.exports = (grunt) ->
         objectToExport: 'Simditor'
         globalAlias: 'Simditor'
         deps:
-          'default': ['$', 'SimpleModule', 'simpleHotkeys', 'simpleUploader']
-          amd: ['jquery', 'simple-module', 'simple-hotkeys', 'simple-uploader']
-          cjs: ['jquery', 'simple-module', 'simple-hotkeys', 'simple-uploader']
+          'default': ['$', 'SimpleModule', 'simpleHotkeys', 'simpleUploader', 'toMarkdown', 'marked']
+          amd: ['jquery', 'simple-module', 'simple-hotkeys', 'simple-uploader', 'to-markdown', 'marked']
+          cjs: ['jquery', 'simple-module', 'simple-hotkeys', 'simple-uploader', 'to-markdown', 'marked']
           global:
-            items: ['jQuery', 'SimpleModule', 'simple.hotkeys', 'simple.uploader']
+            items: ['jQuery', 'SimpleModule', 'simple.hotkeys', 'simple.uploader', 'toMarkdown', 'marked']
             prefix: ''
 
     copy:
@@ -146,6 +146,12 @@ module.exports = (grunt) ->
         }, {
           src: 'node_modules/simple-hotkeys/lib/hotkeys.js',
           dest: 'package/scripts/hotkeys.js'
+        }, {
+          src: 'node_modules/to-markdown/dist/to-markdown.js',
+          dest: 'package/scripts/to-markdown.js'
+        }, {
+          src: 'node_modules/marked/lib/marked.js',
+          dest: 'package/scripts/marked.js'
         }, {
           expand: true,
           flatten: true
@@ -200,6 +206,8 @@ module.exports = (grunt) ->
           'package/scripts/uploader.min.js': 'package/scripts/uploader.js'
           'package/scripts/hotkeys.min.js': 'package/scripts/hotkeys.js'
           'package/scripts/simditor.min.js': 'package/scripts/simditor.js'
+          'package/scripts/to-markdown.min.js': 'package/scripts/to-markdown.js'
+          'package/scripts/marked.min.js': 'package/scripts/marked.js'
 
     usebanner:
       simditor:
@@ -244,6 +252,8 @@ module.exports = (grunt) ->
             'node_modules/simple-module/lib/module.js'
             'node_modules/simple-uploader/lib/uploader.js'
             'node_modules/simple-hotkeys/lib/hotkeys.js'
+            'node_modules/to-markdown/dist/to-markdown.js'
+            'node_modules/marked/lib/marked.js'
           ]
 
     curl:
