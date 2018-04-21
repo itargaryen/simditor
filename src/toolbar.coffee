@@ -20,7 +20,7 @@ class Toolbar extends SimpleModule
     unless $.isArray @opts.toolbar
       @opts.toolbar = ['bold', 'italic', 'underline', 'strikethrough', '|',
         'ol', 'ul', 'blockquote', 'code', '|', 'link', 'image', '|',
-        'indent', 'outdent']
+        'indent', 'outdent', '|', 'markdown']
 
     @_render()
 

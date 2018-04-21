@@ -41,6 +41,7 @@ module.exports = (grunt) ->
             'src/buttons/table.coffee'
             'src/buttons/strikethrough.coffee'
             'src/buttons/alignment.coffee'
+            'src/buttons/markdown.coffee'
           ]
       site:
         expand: true
@@ -119,6 +120,12 @@ module.exports = (grunt) ->
         }, {
           src: 'lib/simditor.js',
           dest: 'site/assets/scripts/simditor.js'
+        }, {
+          src: 'node_modules/to-markdown/dist/to-markdown.js',
+          dest: 'site/assets/scripts/to-markdown.js'
+        }, {
+          src: 'node_modules/marked/lib/marked.js',
+          dest: 'site/assets/scripts/marked.js'
         }]
 
       package:

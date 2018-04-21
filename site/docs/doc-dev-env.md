@@ -16,7 +16,6 @@ First, [fork](https://help.github.com/articles/fork-a-repo) Simditor and clone i
 $ git clone git@github.com:[your username]/simditor.git
 ```
 
-
 #Install Gem Dependencies
 
 We use [Bundler](http://bundler.io/) to manage the gem dependencies：
@@ -39,7 +38,6 @@ $ cd simditor
 $ bundle install
 ```
 
-
 #Install Grunt
 
 Simditor uses [Grunt](http://gruntjs.com/) as the task runner to run tasks such as auto-compiling and watching files.
@@ -49,7 +47,7 @@ Grunt needs to be installed by npm. To have npm working, first need to install [
 Install Grunt's command line interface (CLI) globally:
 
 ```bash
-$ sudo npm install -g grunt-cli
+$ npm install -g grunt-cli
 ```
 
 Install grunt:
@@ -57,24 +55,6 @@ Install grunt:
 ```bash
 $ npm install
 ```
-
-
-#Install Bower Dependencies
-
-Simditor uses [Bower](http://bower.io/) to manage front-end libraries:
-
-Install bower：
-
-```bash
-npm install -g bower
-```
-
-Install bower dependencies:
-
-```bash
-bower install
-```
-
 
 #Run Project
 
