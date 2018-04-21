@@ -1,6 +1,6 @@
 {
   "name": "tar-simditor",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "One fork with bugs fixed of simditor",
   "keywords": [
     "editor",
@@ -21,10 +21,7 @@
   "main": "lib/simditor.js",
   "homepage": "http://simditor.tower.im",
   "dependencies": {
-    "jquery": "~2.1.4",
     "marked": "^0.3.5",
-    "phantomjs": "^2.1.7",
-    "sass": "^1.2.1",
     "simple-hotkeys": "~1.0.3",
     "simple-module": "~2.0.6",
     "simple-uploader": "~2.0.7",
@@ -46,6 +43,9 @@
     "grunt-express": "1.4.0",
     "grunt-jekyll": "0.x",
     "grunt-parallel": "^0.5.1",
-    "grunt-umd": "2.3.x"
+    "grunt-umd": "2.3.x",
+    "jquery": "^3.2.0",
+    "phantomjs": "^2.1.7",
+    "sass": "^1.2.1"
   }
 }
