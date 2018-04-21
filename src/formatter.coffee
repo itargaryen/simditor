@@ -21,17 +21,17 @@ class Formatter extends SimpleModule
     @_allowedAttributes = $.extend
       img: ['src', 'alt', 'width', 'height', 'data-non-image']
       a: ['href', 'target']
-      font: ['color']
+      font: []
       code: ['class']
     , @opts.allowedAttributes
 
     @_allowedStyles = $.extend
-      span: ['color', 'font-size']
-      b: ['color']
-      i: ['color']
-      strong: ['color']
-      strike: ['color']
-      u: ['color']
+      span: []
+      b: []
+      i: []
+      strong: []
+      strike: []
+      u: []
       p: ['margin-left', 'text-align']
       h1: ['margin-left', 'text-align']
       h2: ['margin-left', 'text-align']
