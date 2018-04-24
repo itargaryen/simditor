@@ -1,6 +1,6 @@
 {
   "name": "tar-simditor",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "One fork with bugs fixed of simditor",
   "keywords": [
     "editor",
@@ -22,9 +22,9 @@
   "homepage": "http://simditor.tower.im",
   "dependencies": {
     "marked": "^0.3.19",
-    "simple-hotkeys": "git+https://github.com/itargaryen/simple-hotkeys.git",
-    "simple-module": "^3.0.3",
-    "simple-uploader": "^3.0.0",
+    "simple-hotkeys": "github:itargaryen/simple-hotkeys",
+    "simple-module": "github:itargaryen/simple-module",
+    "simple-uploader": "github:itargaryen/simple-uploader",
     "to-markdown": "^3.1.1"
   },
   "devDependencies": {
