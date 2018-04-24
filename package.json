@@ -1,6 +1,6 @@
 {
   "name": "tar-simditor",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "One fork with bugs fixed of simditor",
   "keywords": [
     "editor",
@@ -25,7 +25,7 @@
     "simple-hotkeys": "github:itargaryen/simple-hotkeys",
     "simple-module": "github:itargaryen/simple-module",
     "simple-uploader": "github:itargaryen/simple-uploader",
-    "to-markdown": "^3.1.1"
+    "to-markdown": "github:itargaryen/turndown"
   },
   "devDependencies": {
     "express": "~3.3.4",
